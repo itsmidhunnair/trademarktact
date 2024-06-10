@@ -20,7 +20,7 @@ const Features = () => {
 
   return (
     <SectionWrapper>
-      <div className="grid grid-cols-12 gap-x-20 mt-12">
+      <div className="grid grid-cols-12 gap-x-20 mt-12 max-sm:flex max-sm:flex-col">
         <div className="col-span-5 w-full p-5">
           <div className="h-28">
             <SectionTitle
@@ -37,7 +37,7 @@ const Features = () => {
                 onClick={() => setSlide(data.id)}
                 className={`${
                   slide === data.id ? data.activeClass : data.inactiveClass
-                } p-5 border-2 rounded-md duration-500 transition-all ${
+                } p-5 border-2 rounded-md duration-500 transition-all max-sm:col-span-full ${
                   data.class
                 }`}
               >
@@ -46,7 +46,7 @@ const Features = () => {
             ))}
           </div>
         </div>
-        <div className="w-px mx-auto bg-gray-200 col-span-1"></div>
+        <div className="w-px mx-auto bg-gray-200 col-span-1 max-sm:hidden"></div>
         <div className="flex col-span-6 w-full">
           <Swiper
             spaceBetween={10}
@@ -64,7 +64,7 @@ const Features = () => {
           >
             {FEATURES_DATA.map((data) => (
               <SwiperSlide key={`main_slider_${data.id}`}>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center max-sm:flex-col">
                   <div className="w-full flex justify-center items-center">
                     <img src={data.img} alt="fast" />
                   </div>

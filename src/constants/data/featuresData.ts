@@ -18,18 +18,6 @@ export const FEATURES_DATA = [
   },
   {
     id: 1,
-    activeClass: "bg-[#C8B500] text-white border-[#C8B500]",
-    inactiveClass:
-      "text-[#C8B500] hover:bg-[#C8B500] hover:text-white border-[#C8B500]",
-    class: "col-span-3",
-    color: "#C8B500",
-    text: "Reliable",
-    description:
-      "We are a team of intellect-protectors who can be relied on to make your vision a recognised reality.",
-    img: reliableImg,
-  },
-  {
-    id: 2,
     activeClass: "bg-[#4682B4] text-white border-[#4682B4]",
     inactiveClass:
       "text-[#4682B4] hover:bg-[#4682B4] hover:text-white border-[#4682B4]",
@@ -41,11 +29,23 @@ export const FEATURES_DATA = [
     img: resultOrientedImg,
   },
   {
+    id: 2,
+    activeClass: "bg-[#C8B500] text-white border-[#C8B500]",
+    inactiveClass:
+      "text-[#C8B500] hover:bg-[#C8B500] hover:text-white border-[#C8B500]",
+    class: "col-span-2",
+    color: "#C8B500",
+    text: "Reliable",
+    description:
+      "We are a team of intellect-protectors who can be relied on to make your vision a recognised reality.",
+    img: reliableImg,
+  },
+  {
     id: 3,
     activeClass: "bg-[#FF6F91] text-white border-[#FF6F91]",
     inactiveClass:
       "text-[#FF6F91] hover:bg-[#FF6F91] hover:text-white border-[#FF6F91]",
-    class: "col-span-1",
+    class: "col-span-2",
     color: "#FF6F91",
     text: "Advisory",
     description:
