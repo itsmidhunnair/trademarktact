@@ -1,12 +1,13 @@
 import { Header } from "./components/common/header";
-import { Features, HeroSection } from "./components/homepage";
+import { AboutUsSection, Features, HeroSection } from "./components/homepage";
 
 function App() {
   return (
     <>
       <Header />
       <HeroSection />
-      <Features/>
+      <Features />
+      <AboutUsSection />
     </>
   );
 }

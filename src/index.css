@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .section-container {
+    @apply p-16 max-sm:px-4 max-sm:py-8 w-full container mx-auto;
+  }
+}
