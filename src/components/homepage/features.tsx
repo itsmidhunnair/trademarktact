@@ -20,11 +20,12 @@ const Features = () => {
 
   return (
     <SectionWrapper>
-      <div className="grid grid-cols-12 gap-x-20 mt-12 max-sm:flex max-sm:flex-col">
-        <div className="col-span-5 w-full p-5">
-          <div className="h-28">
+      <div className="grid grid-cols-12 gap-x-20 max-sm:flex max-sm:flex-col">
+        <div className="col-span-5 w-full">
+          <div className="h-28 max-md:h-10">
             <SectionTitle
               title="We Are"
+              titleClass=" max-sm:text-2xl"
               specialText={FEATURES_DATA[slide].text}
               specialTextClass={`text-[${FEATURES_DATA[slide].color}] whitespace-nowrap`}
               center={false}
@@ -69,10 +70,14 @@ const Features = () => {
                     <img src={data.img} alt="fast" />
                   </div>
                   <div className="text-xl font-semibold text-neutral-500 ">
-                    <p className={`text-[${data.color}] text-3xl pb-5`}>
+                    <p
+                      className={`text-[${data.color}] text-3xl pb-5 max-md:text-2xl`}
+                    >
                       {data.text}
                     </p>
-                    <p className="text-justify">{data.description}</p>
+                    <p className="text-justify max-md:text-sm">
+                      {data.description}
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>

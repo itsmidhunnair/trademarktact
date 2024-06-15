@@ -7,6 +7,14 @@ export default {
         primary: "#60cb94",
       },
       keyframes: {
+        widthLeftRight: {
+          "0%": {
+            width: "0",
+          },
+          "80%": {
+            width: "0",
+          },
+        },
         introLogoLeft: {
           "0%": {
             left: "-12rem",
@@ -40,6 +48,7 @@ export default {
         fade15: "fadeOut 0.9s ease-in-out",
         fade2: "fadeOut 1.3s ease-in-out",
         scroll: "scroll 10s linear infinite",
+        widthLeftRight: "widthLeftRight 0.9s linear",
       },
     },
   },

@@ -1,3 +1,4 @@
+import { Footer } from "./components/common";
 import { Header } from "./components/common/header";
 import { AboutUsSection, Features, HeroSection } from "./components/homepage";
 
@@ -8,6 +9,7 @@ function App() {
       <HeroSection />
       <Features />
       <AboutUsSection />
+      <Footer />
     </>
   );
 }

@@ -2,15 +2,17 @@
 import { useState } from "react";
 import Typewriter from "typewriter-effect";
 import { SectionWrapper } from "../common";
+import ContactForm from "./contactForm";
 
 const HeroSection = () => {
   const [loadCount, setLoadCount] = useState(0);
   console.log("🚀 ~ HeroSection ~ loadCount:", loadCount);
 
   return (
-    <SectionWrapper>
-      <div className="flex w-full h-full max-md:flex-col">
+    <SectionWrapper bgType="secondary">
+      <div className="flex w-full h-full max-md:flex-col-reverse">
         <div className="flex-1 max-sm:pt-12">
+          <ContactForm />
           {/* <img src={he
         
         roImg} alt="hero_img" className="w-full" /> */}
@@ -34,9 +36,16 @@ const HeroSection = () => {
           </h4>
           {loadCount >= 1 ? (
             <>
-              <h2 className="text-7xl pb-6 antialiased animate-fade2 max-sm:text-4xl">
+              <h2 className="text-7xl pb-4 antialiased animate-fade2 max-sm:text-4xl">
                 Everything!
               </h2>
+              {loadCount >= 2 ? (
+                <div
+                  className={`w-80 h-1 bg-primary animate-widthLeftRight max-md:w-40 max-md:mx-auto`}
+                ></div>
+              ) : (
+                <div className={`w-80 h-1 invisible max-md:w-40`}></div>
+              )}
               <h4 className="capitalize tracking-wide font-bold text-2xl animate-fade15 text-neutral-500 mt-6 max-sm:text-xl">
                 <Typewriter
                   onInit={(typewriter) => {
@@ -68,8 +77,9 @@ const HeroSection = () => {
             </>
           ) : (
             <div className="invisible">
-              <h2 className="text-7xl pb-6 max-sm:text-4xl">Everything!</h2>
-              <h4 className="font-bold text-3xl mt-6 max-sm:text-xl">
+              <h2 className="text-7xl pb-4 max-sm:text-4xl">Everything!</h2>
+              <div className={`h-1 hidden w-1 max-md:w-40`}></div>
+              <h4 className="font-bold text-2xl mt-6 max-sm:text-xl">
                 Get your intellectual property registered with
               </h4>
               <h2 className="text-7xl pb-6 max-sm:text-4xl">

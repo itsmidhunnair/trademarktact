@@ -1,6 +1,7 @@
 interface Props {
   title: string;
   center?: boolean;
+  titleClass?: string;
   color?: "dark" | "light";
   specialText?: string;
   specialTextClass?: string;
@@ -13,6 +14,7 @@ const SectionTitle = ({
   title,
   center = true,
   color = "dark",
+  titleClass = "",
   specialText,
   specialTextClass,
 }: Props) => {
@@ -24,7 +26,7 @@ const SectionTitle = ({
   return (
     <>
       <p
-        className={`text-5xl font-semibold uppercase text-gray-700 max-sm:text-3xl ${
+        className={`${titleClass} text-5xl font-semibold uppercase text-gray-700 max-sm:text-3xl ${
           center ? "text-center" : ""
         } ${type[color]}`}
       >
@@ -37,6 +39,5 @@ const SectionTitle = ({
     </>
   );
 };
-1;
 
 export default SectionTitle;
